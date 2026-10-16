@@ -1,0 +1,29 @@
+{
+  "name": "donati-ca-skin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive reimplementation of Donati et al. (2022), Calcium signalling in photodamaged skin",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.mjs --serve",
+    "build": "node scripts/build.mjs --single",
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx scripts/validate.ts",
+    "reference": "python3 scripts/reference_scipy.py validation/scipy_radau_ref.npz"
+  },
+  "dependencies": {
+    "d3-delaunay": "^6.0.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/d3-delaunay": "^6.0.4",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}
